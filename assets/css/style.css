@@ -3,7 +3,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif, helvetica;
+  /* font-family: sans-serif, helvetica; */
+}
+
+
+/* criando variaveis padroes para o css */
+:root {
+
+  /* font-family ; */
+  --font-primary: sans-serif, helvetica;
+
+  /* colors */
+  --text-color-primary:rgb(2, 51, 115);
+  --text-color-secondary: #4b4b4b;
 }
 
 body {
@@ -21,6 +33,9 @@ body {
 
   background-color: #ebd4ae;
   padding: 1.7em 20px;
+
+  font-family: var(--font-primary);
+  
 }
 
 .logo_menu {
@@ -45,7 +60,7 @@ body {
 
 .item_menu a {
   text-decoration: none;
-  color: rgb(2, 51, 115);
+  color: var(--text-color-primary);
   font-size: 1.125rem;
   padding: 0.6em 1.5em;
 }
@@ -80,22 +95,56 @@ body {
 /* START HERO */
 .hero_container {
   width: 100%;
-  display: flex;
+
+}
+  
+
+.container_home{
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 5.3rem;
   padding-bottom: 100px;
   padding-right: 50px;
   padding-left: 200px;
 }
 
+
 .hero_figure{
-  width: 535px;
-  height: 700px;
+  width: 33.43rem;
+  height: 43.75rem;
 }
 
 .hero_figure img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 80px 0 0 0;
+}
+
+.content_container_hero{
+  margin-left: 5.63rem;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content_container_hero h2 {
+  width: 27rem;
+  font-size: 3.48em;
+  color: var(--text-color-primary);
+  font-family: "Lilita One", cursive;
+  line-height: 1.1em;
+}
+
+.content_container_hero p {
+  width: 22rem;
+  font-size: 1.12em;
+  margin: 3.12rem 0;
+  color: var(--text-color-secondary);
+  font-family: var(--font-primary);
 }
